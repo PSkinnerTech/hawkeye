@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "framework": "other",
+  "buildCommand": "npm ci --ignore-scripts && npm run vercel-build",
+  "outputDirectory": "build/dist"
+}
+

@@ -23,7 +23,8 @@
     "doc": "grunt jsdoc",
     "prepare": "npm run build",
     "test": "grunt karma",
-    "test:watch": "karma start karma.conf.js"
+    "test:watch": "karma start karma.conf.js",
+    "vercel-build": "grunt requirejs copy"
   },
   "files": [
     "build/dist/images/",
@@ -71,5 +72,8 @@
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
