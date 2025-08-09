@@ -106,6 +106,11 @@ module.exports = function (grunt) {
                         rename: function (dest, src) {
                             return dest + src.replace('WorldWindShim.build', 'WorldWindShim');
                         }
+                    },
+                    {
+                        expand: true,
+                        src: ['index.html'],
+                        dest: 'build/dist/'
                     }
                 ]
             }
