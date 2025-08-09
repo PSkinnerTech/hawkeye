@@ -24,7 +24,10 @@
     "prepare": "npm run build",
     "test": "grunt karma",
     "test:watch": "karma start karma.conf.js",
-    "vercel-build": "grunt requirejs copy"
+    "vercel-build": "grunt requirejs copy",
+    "dev:core": "grunt requirejs:compileDebug copy",
+    "dev:core:watch": "grunt watch",
+    "dev": "concurrently -k -n core,web -c green,cyan \"npm:dev:core:watch\" \"cd web && npm run dev\""
   },
   "files": [
     "build/dist/images/",
@@ -47,7 +50,9 @@
     "karma-jasmine": "^4.0.1",
     "karma-junit-reporter": "^2.0.1",
     "karma-requirejs": "^1.1.0",
-    "recursive-readdir": "^2.2.2"
+    "recursive-readdir": "^2.2.2",
+    "grunt-contrib-watch": "^1.1.0",
+    "concurrently": "^8.2.0"
   },
   "keywords": [
     "sdk",

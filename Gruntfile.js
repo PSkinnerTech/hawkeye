@@ -41,6 +41,17 @@ module.exports = function (grunt) {
             }
         },
 
+        watch: {
+            scripts: {
+                files: ['src/**/*.js'],
+                tasks: ['requirejs:compileDebug']
+            },
+            assets: {
+                files: ['images/**', 'examples/**', 'index.html', 'README.md', 'LICENSE'],
+                tasks: ['copy']
+            }
+        },
+
         requirejs: {
             compile: {
                 options: {
