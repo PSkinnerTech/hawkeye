@@ -2,6 +2,9 @@
   "version": 2,
   "installCommand": "npm ci --ignore-scripts",
   "buildCommand": "npm run vercel-build",
-  "outputDirectory": "build/dist"
+  "outputDirectory": "build/dist",
+  "rewrites": [
+    { "source": "/", "destination": "/examples/BasicExample.html" }
+  ]
 }
 
